@@ -1,3 +1,7 @@
+/**
+ * RecordActivity implements the record
+ * functionality of WaiterHelper
+ */
 package com.example.waiterhelper;
 
 import android.annotation.TargetApi;

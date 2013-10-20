@@ -1,5 +1,6 @@
 /**
- * 
+ * Implements the file reading and writing
+ * for WaiterHelper
  */
 package com.example.waiterhelper;
 
@@ -13,8 +14,8 @@ import java.io.InputStreamReader;
 import android.content.Context;
 
 /**
- * @author tendaitt
- * 
+ * @author Tendai T.T. Mudyiwa
+ * @version October 20 2013
  */
 public class PatronFileReader {
 	private FileOutputStream fos;

@@ -1,5 +1,6 @@
-/**
- * 
+/*DBToPatronConverter is a helper class that
+ * converts database entries to instances of
+ * the Patron Class 
  */
 package com.example.waiterhelper;
 
@@ -12,8 +13,8 @@ import android.database.sqlite.SQLiteDatabase;
 import com.example.waiterhelper.PatronReaderContract.PatronEntry;
 
 /**
- * @author tendaitt
- *
+ * @author Tendai T.T. Mudyiwa
+ * @version October 20 2013
  */
 public class DBToPatronConverter {
 
@@ -21,12 +22,19 @@ public class DBToPatronConverter {
 	private SQLiteDatabase patronDb;
 	private ArrayList<Patron> patronList;
 	
+	/**
+	 * Constructor for the DBToPatronConverter
+	 */
 	public DBToPatronConverter(Context context){
 		this.patronDbHelper = new PatronDbSQLHelper(context,"", null, 0);
 		this.patronDb = patronDbHelper.getReadableDatabase();
 		this.patronList = new ArrayList<Patron>();
 	}
 	
+	/**
+	 * Method that converts database entries to patron objects
+	 * @return	returns a list of Patrons
+	 */
 	public ArrayList<Patron> convertToPatron(){
 		//Columns required
 		String[] projection = {
@@ -36,7 +44,6 @@ public class DBToPatronConverter {
 				PatronEntry.COLUMN_MEAL
 		};
 		
-		//How do you want the results to be sorted in the Cursor
 		String sortOrder = 
 				PatronEntry._ID + " DESC";
 

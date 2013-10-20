@@ -1,3 +1,7 @@
+/**
+ * LoadActivity implements the load 
+ * activity for the WaiterHelper
+ */
 package com.example.waiterhelper;
 
 import android.app.Activity;

@@ -1,3 +1,7 @@
+/**
+ * Store Activity implements the storing 
+ * functionality for the WaiterHelper
+ */
 package com.example.waiterhelper;
 
 import android.annotation.TargetApi;

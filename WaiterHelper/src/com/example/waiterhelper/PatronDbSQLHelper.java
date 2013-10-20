@@ -12,7 +12,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 /** The PatronDbSQLHelper class creates the database and table
  * @author Tendai T.T. Mudyiwa
- * @version 1.0
+ * @version October 20 2013
  */
 public class PatronDbSQLHelper extends SQLiteOpenHelper{
 	

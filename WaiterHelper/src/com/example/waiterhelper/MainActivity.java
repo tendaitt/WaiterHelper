@@ -1,3 +1,7 @@
+/**
+ * MainActivity implement the functionality of 
+ * the WaiterHelper homepage
+ */
 package com.example.waiterhelper;
 
 import com.example.waiterhelper.PatronReaderContract.PatronEntry;

@@ -1,3 +1,7 @@
+/**
+ * ViewActivity implements that view of the 
+ * WaiterHelper
+ */
 package com.example.waiterhelper;
 
 import java.util.ArrayList;

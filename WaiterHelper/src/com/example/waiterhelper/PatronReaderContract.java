@@ -1,12 +1,14 @@
 /**
- * 
+ * PatronReaderContract defines what the columns
+ * of the table or patrons is
  */
 package com.example.waiterhelper;
 
 import android.provider.BaseColumns;
 
 /**
- * @author tendaitt
+ * @author  Tendai T.T. Mudyiwa
+ * @version October 20 2013
  *
  */
 public final class PatronReaderContract {
