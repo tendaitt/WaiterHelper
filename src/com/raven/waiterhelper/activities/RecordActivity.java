@@ -21,9 +21,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 
-import com.example.waitresshelper.R;
 import com.raven.waiterhelper.db.PatronDbSQLHelper;
 import com.raven.waiterhelper.db.PatronReaderContract.PatronEntry;
+import com.raven.waitresshelper.R;
 
 public class RecordActivity extends Activity {
 

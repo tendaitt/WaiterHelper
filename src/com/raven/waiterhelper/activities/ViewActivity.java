@@ -16,9 +16,9 @@ import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.example.waitresshelper.R;
 import com.raven.waiterhelper.db.DBToPatronConverter;
 import com.raven.waiterhelper.db.Patron;
+import com.raven.waitresshelper.R;
 
 public class ViewActivity extends Activity {
 

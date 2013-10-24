@@ -4,19 +4,18 @@
  */
 package com.raven.waiterhelper.activities;
 
-import com.example.waitresshelper.R;
-import com.raven.waiterhelper.db.PatronDbSQLHelper;
-import com.raven.waiterhelper.db.PatronFileReader;
-import com.raven.waiterhelper.db.PatronReaderContract.PatronEntry;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.Button;
+
+import com.raven.waiterhelper.db.PatronDbSQLHelper;
+import com.raven.waiterhelper.db.PatronFileReader;
+import com.raven.waiterhelper.db.PatronReaderContract.PatronEntry;
+import com.raven.waitresshelper.R;
 
 /**
  * This class has code for the main activity for the WaiterHelperApplication
@@ -30,20 +29,6 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-
-		Button enterPatron = (Button)findViewById(R.id.enterPatron);
-		Button viewPatrons = (Button)findViewById(R.id.viewButton);
-		Button storePatrons = (Button)findViewById(R.id.storeButton);
-		Button loadPatrons = (Button)findViewById(R.id.loadButton);
-		Button exitApplication = (Button)findViewById(R.id.exitButton);
-
-		enterPatron.setOnClickListener(enterPatronListener);
-		viewPatrons.setOnClickListener(viewPatronListener);
-		storePatrons.setOnClickListener(storePatronListener);
-		loadPatrons.setOnClickListener(loadPatronListener);
-		exitApplication.setOnClickListener(exitApplicationListener);
-
-
 	}
 
 	@Override
@@ -53,56 +38,37 @@ public class MainActivity extends Activity {
 		return true;
 	}
 
-	private OnClickListener enterPatronListener = new OnClickListener() {
+	public void enterPatron(View view){
+		Intent recordIntent = new Intent(MainActivity.this, RecordActivity.class);
+		MainActivity.this.startActivity(recordIntent);
+	}
 
-		@Override
-		public void onClick(View v) {
-			Intent recordIntent = new Intent(MainActivity.this, RecordActivity.class);
-			MainActivity.this.startActivity(recordIntent);
-		}
-	};
 
-	private OnClickListener storePatronListener = new OnClickListener() {
+	public void storePatron(View view){
+		Intent storeIntent = new Intent(MainActivity.this, StoreActivity.class);
+		MainActivity.this.startActivity(storeIntent);
+	}
 
-		@Override
-		public void onClick(View v) {
-			Intent storeIntent = new Intent(MainActivity.this, StoreActivity.class);
-			MainActivity.this.startActivity(storeIntent);
-		}
-	};
-	private OnClickListener viewPatronListener = new OnClickListener() {
-
-		@Override
-		public void onClick(View v) {
-			Intent viewIntent = new Intent(MainActivity.this, ViewActivity.class);
-			MainActivity.this.startActivity(viewIntent);
-		}
-	};
-	private OnClickListener loadPatronListener = new OnClickListener() {
-
-		@Override
-		public void onClick(View v) {
-			String[] fileList = fileList();
-			PatronFileReader fileReader = new PatronFileReader(fileList[0], getApplicationContext());
-			String fileOutput = fileReader.retrieveFile();
-			Intent loadIntent = new Intent(MainActivity.this, LoadActivity.class);
-			loadIntent.putExtra("patronList", fileOutput);
-			startActivity(loadIntent);
-		}
-	};
+	public void viewPatron(View view){
+		Intent viewIntent = new Intent(MainActivity.this, ViewActivity.class);
+		MainActivity.this.startActivity(viewIntent);
+	}
 	
-	private OnClickListener exitApplicationListener = new OnClickListener() {
-
-		@Override
-		public void onClick(View v) {
-			//check if any list that has been created is stored.
-			PatronDbSQLHelper dbHelper = new PatronDbSQLHelper(getApplicationContext(), "", null, 0);
-			SQLiteDatabase patronDb = dbHelper.getReadableDatabase();
-			patronDb.delete(PatronEntry.TABLE_NAME, null, null);
-	        patronDb.close();
-			finish();
-			System.exit(0);
-			
-		}
-	};
+	public void loadPatron(View view){
+		String[] fileList = fileList();
+		PatronFileReader fileReader = new PatronFileReader(fileList[0], getApplicationContext());
+		String fileOutput = fileReader.retrieveFile();
+		Intent loadIntent = new Intent(MainActivity.this, LoadActivity.class);
+		loadIntent.putExtra("patronList", fileOutput);
+		startActivity(loadIntent);
+	}
+	
+	public void exitWaiterHelper(View view){
+		Log.i("ExitWaiterHelper", "exitWaiterHelper executing");
+		PatronDbSQLHelper dbHelper = new PatronDbSQLHelper(getApplicationContext(), "", null, 0);
+		SQLiteDatabase patronDb = dbHelper.getReadableDatabase();
+		patronDb.delete(PatronEntry.TABLE_NAME, null, null);
+		patronDb.close();
+		finish();
+		System.exit(0);}
 }

@@ -17,9 +17,9 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.example.waitresshelper.R;
 import com.raven.waiterhelper.db.DBToPatronConverter;
 import com.raven.waiterhelper.db.PatronFileReader;
+import com.raven.waitresshelper.R;
 
 public class StoreActivity extends Activity {
 

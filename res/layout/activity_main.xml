@@ -16,6 +16,7 @@
         android:layout_width="187dp"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:onClick="enterPatron"
         android:text="@string/enter_patron" />
 
     <Button
@@ -23,6 +24,7 @@
         android:layout_width="187dp"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:onClick="viewPatron"
         android:text="@string/view_button" />
 
     <Button
@@ -30,6 +32,7 @@
         android:layout_width="187dp"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:onClick="storePatron"
         android:text="@string/store_button" />
 
     <Button
@@ -37,6 +40,7 @@
         android:layout_width="187dp"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:onClick="loadPatron"
         android:text="@string/load_button" />
 
     <Button
@@ -44,6 +48,7 @@
         android:layout_width="187dp"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:onClick="exitWaiterHelper"
         android:text="@string/exit_button" />
 
 </LinearLayout>
