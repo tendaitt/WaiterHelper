@@ -1,6 +1,4 @@
-/**
- * 
- */
+
 package com.raven.waiterhelper.db;
 
 import com.raven.waiterhelper.db.PatronReaderContract.PatronEntry;
@@ -12,7 +10,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 /** The PatronDbSQLHelper class creates the database and table
  * @author Tendai T.T. Mudyiwa
- * @version October 20 2013
+ * @version October 24 2013
  */
 public class PatronDbSQLHelper extends SQLiteOpenHelper{
 	

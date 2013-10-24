@@ -1,12 +1,12 @@
 /**
- * This Patron class is used to define the attributes of
- * patron in a restaurant
+ * This Patron class defines the attributes of
+ * a patron in a restaurant
  */
 package com.raven.waiterhelper.db;
 
 /**
  * @author Tendai T.T. Mudyiwa
- * @version October 20 2013
+ * @version October 24 2013
  */
 public class Patron {
 

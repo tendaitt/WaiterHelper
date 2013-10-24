@@ -8,7 +8,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 
@@ -64,7 +63,6 @@ public class MainActivity extends Activity {
 	}
 	
 	public void exitWaiterHelper(View view){
-		Log.i("ExitWaiterHelper", "exitWaiterHelper executing");
 		PatronDbSQLHelper dbHelper = new PatronDbSQLHelper(getApplicationContext(), "", null, 0);
 		SQLiteDatabase patronDb = dbHelper.getReadableDatabase();
 		patronDb.delete(PatronEntry.TABLE_NAME, null, null);

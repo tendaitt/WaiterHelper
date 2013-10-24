@@ -1,6 +1,6 @@
 /**
- * PatronReaderContract defines what the columns
- * of the table or patrons is
+ * PatronReaderContract contains inner class that defines
+ * the db table and its columns
  */
 package com.raven.waiterhelper.db;
 
@@ -8,7 +8,7 @@ import android.provider.BaseColumns;
 
 /**
  * @author  Tendai T.T. Mudyiwa
- * @version October 20 2013
+ * @version October 24 2013
  *
  */
 public final class PatronReaderContract {

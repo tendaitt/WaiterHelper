@@ -14,7 +14,7 @@ import com.raven.waiterhelper.db.PatronReaderContract.PatronEntry;
 
 /**
  * @author Tendai T.T. Mudyiwa
- * @version October 20 2013
+ * @version October 24 2013
  */
 public class DBToPatronConverter {
 
@@ -54,12 +54,10 @@ public class DBToPatronConverter {
 
 		c.moveToFirst();
 		
-		int i = 0;
-		while(i<c.getCount()){
+		while(c.moveToNext()){
 			Patron patron = new Patron(c.getString(c.getColumnIndexOrThrow(PatronEntry.COLUMN_TABLE_ID)),c.getString(c.getColumnIndexOrThrow(PatronEntry.COLUMN_SEAT_ID)), c.getString(c.getColumnIndexOrThrow(PatronEntry.COLUMN_MEAL)));
 			patronList.add(patron);
 			c.moveToNext();
-			i++;
 		}
 		
 		return patronList;
