@@ -2,7 +2,7 @@
  * Store Activity implements the storing 
  * functionality for the WaiterHelper
  */
-package com.example.waiterhelper;
+package com.raven.waiterhelper.activities;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
@@ -18,6 +18,8 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.example.waitresshelper.R;
+import com.raven.waiterhelper.db.DBToPatronConverter;
+import com.raven.waiterhelper.db.PatronFileReader;
 
 public class StoreActivity extends Activity {
 

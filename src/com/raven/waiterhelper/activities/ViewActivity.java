@@ -2,7 +2,7 @@
  * ViewActivity implements that view of the 
  * WaiterHelper
  */
-package com.example.waiterhelper;
+package com.raven.waiterhelper.activities;
 
 import java.util.ArrayList;
 
@@ -17,6 +17,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.example.waitresshelper.R;
+import com.raven.waiterhelper.db.DBToPatronConverter;
+import com.raven.waiterhelper.db.Patron;
 
 public class ViewActivity extends Activity {
 

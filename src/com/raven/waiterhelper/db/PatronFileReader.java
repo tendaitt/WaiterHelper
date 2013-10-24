@@ -2,7 +2,7 @@
  * Implements the file reading and writing
  * for WaiterHelper
  */
-package com.example.waiterhelper;
+package com.raven.waiterhelper.db;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;

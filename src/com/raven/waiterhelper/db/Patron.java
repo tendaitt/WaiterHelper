@@ -2,7 +2,7 @@
  * This Patron class is used to define the attributes of
  * patron in a restaurant
  */
-package com.example.waiterhelper;
+package com.raven.waiterhelper.db;
 
 /**
  * @author Tendai T.T. Mudyiwa

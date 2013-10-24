@@ -1,9 +1,9 @@
 /**
  * 
  */
-package com.example.waiterhelper;
+package com.raven.waiterhelper.db;
 
-import com.example.waiterhelper.PatronReaderContract.PatronEntry;
+import com.raven.waiterhelper.db.PatronReaderContract.PatronEntry;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

@@ -2,7 +2,7 @@
  * RecordActivity implements the record
  * functionality of WaiterHelper
  */
-package com.example.waiterhelper;
+package com.raven.waiterhelper.activities;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
@@ -21,8 +21,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 
-import com.example.waiterhelper.PatronReaderContract.PatronEntry;
 import com.example.waitresshelper.R;
+import com.raven.waiterhelper.db.PatronDbSQLHelper;
+import com.raven.waiterhelper.db.PatronReaderContract.PatronEntry;
 
 public class RecordActivity extends Activity {
 

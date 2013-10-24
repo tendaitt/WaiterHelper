@@ -2,10 +2,12 @@
  * MainActivity implement the functionality of 
  * the WaiterHelper homepage
  */
-package com.example.waiterhelper;
+package com.raven.waiterhelper.activities;
 
-import com.example.waiterhelper.PatronReaderContract.PatronEntry;
 import com.example.waitresshelper.R;
+import com.raven.waiterhelper.db.PatronDbSQLHelper;
+import com.raven.waiterhelper.db.PatronFileReader;
+import com.raven.waiterhelper.db.PatronReaderContract.PatronEntry;
 
 import android.app.Activity;
 import android.content.Intent;

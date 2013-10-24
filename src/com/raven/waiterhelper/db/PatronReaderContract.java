@@ -2,7 +2,7 @@
  * PatronReaderContract defines what the columns
  * of the table or patrons is
  */
-package com.example.waiterhelper;
+package com.raven.waiterhelper.db;
 
 import android.provider.BaseColumns;
 

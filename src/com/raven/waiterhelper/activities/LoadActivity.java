@@ -2,7 +2,7 @@
  * LoadActivity implements the load 
  * activity for the WaiterHelper
  */
-package com.example.waiterhelper;
+package com.raven.waiterhelper.activities;
 
 import android.app.Activity;
 import android.os.Bundle;

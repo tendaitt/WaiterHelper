@@ -2,7 +2,7 @@
  * converts database entries to instances of
  * the Patron Class 
  */
-package com.example.waiterhelper;
+package com.raven.waiterhelper.db;
 
 import java.util.ArrayList;
 
@@ -10,7 +10,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-import com.example.waiterhelper.PatronReaderContract.PatronEntry;
+import com.raven.waiterhelper.db.PatronReaderContract.PatronEntry;
 
 /**
  * @author Tendai T.T. Mudyiwa
