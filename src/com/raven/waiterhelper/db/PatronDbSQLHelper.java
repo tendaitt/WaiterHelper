@@ -1,19 +1,19 @@
 
 package com.raven.waiterhelper.db;
 
-import com.raven.waiterhelper.db.PatronReaderContract.PatronEntry;
-
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteDatabase.CursorFactory;
 import android.database.sqlite.SQLiteOpenHelper;
+
+import com.raven.waiterhelper.db.PatronReaderContract.PatronEntry;
 
 /** The PatronDbSQLHelper class creates the database and table
  * @author Tendai T.T. Mudyiwa
  * @version October 24 2013
  */
 public class PatronDbSQLHelper extends SQLiteOpenHelper{
-	
+		
 	private static final String TEXT_TYPE = " TEXT";
 	private static final String COMMA_SEP = ",";
 	private static final String SQL_CREATE_ENTRIES =

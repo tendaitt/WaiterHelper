@@ -80,6 +80,7 @@ public class RecordActivity extends Activity {
 		public void onClick(View v) {
 			updateDB();
 			reset();
+
 		}
 	};
 	/**

@@ -11,6 +11,7 @@ import android.app.Activity;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
@@ -80,6 +81,8 @@ public class ViewActivity extends Activity {
 		ArrayAdapter<Patron> arrayAdapter =      
 		         new ArrayAdapter<Patron>(this,android.R.layout.simple_list_item_1, patronList);
 		         patronListView.setAdapter(arrayAdapter); 
+		         
+		Log.i("Populate View", "I was empty");
 
 	}
 

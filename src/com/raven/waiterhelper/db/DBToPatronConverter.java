@@ -46,15 +46,14 @@ public class DBToPatronConverter {
 		
 		String sortOrder = 
 				PatronEntry._ID + " DESC";
-
 		Cursor c = patronDb.query(
 				PatronEntry.TABLE_NAME,
 				projection, 
 				null, null, null, null, sortOrder);
-
+		
 		c.moveToFirst();
 		
-		while(c.moveToNext()){
+		while(!c.isAfterLast()){
 			Patron patron = new Patron(c.getString(c.getColumnIndexOrThrow(PatronEntry.COLUMN_TABLE_ID)),c.getString(c.getColumnIndexOrThrow(PatronEntry.COLUMN_SEAT_ID)), c.getString(c.getColumnIndexOrThrow(PatronEntry.COLUMN_MEAL)));
 			patronList.add(patron);
 			c.moveToNext();

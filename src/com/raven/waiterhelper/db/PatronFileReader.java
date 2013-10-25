@@ -41,6 +41,8 @@ public class PatronFileReader {
 	}
 
 	public void storeFile() {
+		deletePrevFiles();
+		
 		try {
 			fos = context.openFileOutput(fileName, Context.MODE_PRIVATE);
 		} catch (FileNotFoundException e) {
@@ -92,4 +94,10 @@ public class PatronFileReader {
 		return formattedString;
 	}
 
+	public void deletePrevFiles(){
+		String[] fileList = context.fileList();
+		for(int i = 0; i<fileList.length;i++){
+			context.deleteFile(fileList[i]);
+		}
+	}
 }

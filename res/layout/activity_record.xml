@@ -18,9 +18,11 @@
         android:layout_marginBottom="30dp"
         android:layout_marginTop="50dp"
         android:ems="10"
-        android:inputType="number"
         android:hint="@string/table_id"
+        android:inputType="number"
+        android:textAlignment="center"
         android:textColor="#0000CC" >
+
     </EditText>
 
     <EditText
@@ -31,6 +33,7 @@
         android:ems="10"
         android:hint="@string/seat_id"
         android:inputType="number"
+        android:textAlignment="center"
         android:textColor="#0000CC" />
 
     <Spinner

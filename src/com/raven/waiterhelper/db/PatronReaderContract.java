@@ -20,7 +20,6 @@ public final class PatronReaderContract {
 
 	/*Inner class defines table contents */
 	public static abstract class PatronEntry implements BaseColumns{
-		
 		public static final String TABLE_NAME = "patron";
 		public static final String _ID = "id";
 		public static final String COLUMN_TABLE_ID = "table_number";
