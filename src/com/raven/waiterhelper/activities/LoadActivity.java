@@ -11,7 +11,12 @@ import android.view.Menu;
 import android.widget.TextView;
 
 import com.raven.waitresshelper.R;
-
+/**
+ * 
+ * @author Tendai T.T. Mudyiwa
+ * @version October 25 2013
+ *
+ */
 public class LoadActivity extends Activity {
 
 	@Override

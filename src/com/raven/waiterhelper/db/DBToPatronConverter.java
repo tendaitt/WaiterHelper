@@ -68,7 +68,6 @@ public class DBToPatronConverter {
 		String stringList = "";
 		
 		for(int i = 0; i<patronList.size(); i++){
-			
 			stringList.concat(patronList.get(i).toString());
 		}
 	

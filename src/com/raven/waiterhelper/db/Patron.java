@@ -21,7 +21,6 @@ public class Patron {
 		this.mealOrdered = mealOrdered;
 	}
 
-
 	/**
 	 * @return the seatNumber
 	 */
@@ -29,14 +28,12 @@ public class Patron {
 		return seatNumber;
 	}
 
-
 	/**
 	 * @return the tableID
 	 */
 	public String getTableID() {
 		return tableID;
 	}
-
 
 	/**
 	 * @return the mealOrdered
@@ -48,9 +45,7 @@ public class Patron {
 	@Override
 	public String toString(){
 		String patronDetails = new String();
-		
-		patronDetails = "Table: "+ tableID + '\n' +"Seat: " +seatNumber+'\n' + "Meal: "+ mealOrdered +'\n'+"****************"+'\n';
-		
+		patronDetails = "Table: "+ tableID +" " + '\n' +"Seat: " +seatNumber+" "+'\n' + "Meal: "+ mealOrdered +" "+'\n'+"****************"+'\n';
 		return patronDetails;
 		
 	}

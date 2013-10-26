@@ -72,7 +72,7 @@ public class ViewActivity extends Activity {
 	}
 
 	/**
-	 * 
+	 * Populates the view page
 	 */
 	private void populate() {
 		DBToPatronConverter patronConverter = new DBToPatronConverter(getApplicationContext());

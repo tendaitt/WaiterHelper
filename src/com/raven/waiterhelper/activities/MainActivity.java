@@ -1,6 +1,6 @@
 /**
  * MainActivity implement the functionality of 
- * the WaiterHelper homepage
+ * the WaiterHelper home page
  */
 package com.raven.waiterhelper.activities;
 
@@ -20,7 +20,7 @@ import com.raven.waitresshelper.R;
  * This class has code for the main activity for the WaiterHelperApplication
  * 
  * @author Tendai T.T. Mudyiwa
- * @version Oct 10 2013
+ * @version Oct 25 2013
  */
 public class MainActivity extends Activity {
 
@@ -36,7 +36,7 @@ public class MainActivity extends Activity {
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
-
+	
 	public void enterPatron(View view){
 		Intent recordIntent = new Intent(MainActivity.this, RecordActivity.class);
 		MainActivity.this.startActivity(recordIntent);
@@ -53,6 +53,10 @@ public class MainActivity extends Activity {
 		MainActivity.this.startActivity(viewIntent);
 	}
 	
+	/**
+	 * Loads the patron file
+	 * @param view
+	 */
 	public void loadPatron(View view){
 		String[] fileList = fileList();
 		PatronFileReader fileReader = new PatronFileReader(fileList[0], getApplicationContext());
@@ -62,11 +66,16 @@ public class MainActivity extends Activity {
 		startActivity(loadIntent);
 	}
 	
+	/**
+	 * Exits the application
+	 * @param view
+	 */
 	public void exitWaiterHelper(View view){
 		PatronDbSQLHelper dbHelper = new PatronDbSQLHelper(getApplicationContext(), "", null, 0);
 		SQLiteDatabase patronDb = dbHelper.getReadableDatabase();
 		patronDb.delete(PatronEntry.TABLE_NAME, null, null);
 		patronDb.close();
 		finish();
-		System.exit(0);}
+		System.exit(0);
+		}
 }

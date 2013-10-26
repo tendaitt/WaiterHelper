@@ -25,6 +25,12 @@ import com.raven.waiterhelper.db.PatronDbSQLHelper;
 import com.raven.waiterhelper.db.PatronReaderContract.PatronEntry;
 import com.raven.waitresshelper.R;
 
+/**
+ * 
+ * @author Tendai T.T. Mudyiwa
+ * @version October 25 2013
+ *
+ */
 public class RecordActivity extends Activity {
 
 	private String tableNumber;
@@ -125,7 +131,9 @@ public class RecordActivity extends Activity {
 		seatID.setText("");
 	}
 
-
+	/**
+	 * Updates the database with each new entry
+	 */
 	private void updateDB() {
 		//get the values for everything
 		tableNumber = tableID.getText().toString();
